@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ItemList from "./Components/ItemList";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  let products = [
+    { image: "./tab1.jpg", name: "Paris", price: "100$" },
+    { image: "./tab2.jpg", name: "Piano", price: "100$" },
+    { image: "./tab3.jpg", name: "Tunisia", price: "100$" },
+  ];
+
+  return <ItemList items={products} />;
 }
 
 export default App;
